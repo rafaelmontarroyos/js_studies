@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 - JS Async / Await</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    async function getBreweries(){
+
+        const beweries = await fetch('https://gist.githubusercontent.com/rafaelmontarroyos/e2711e8394e24d188108c7be8ba08f11/raw/204ced0602760829597f5caa2680e5f7cb29bade/cervejarias.json');
+        const data = await beweries.json();
+        
+        return data.map(brewery => {
+            console.log(brewery.name)
+        });
+    }
+
+
+    getBreweries();
+
+</script>
+</html>

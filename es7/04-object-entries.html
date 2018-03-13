@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04 - Object Entries</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    const squads = {
+        bayern:1,
+        bvb: 2,
+        vasco: 6
+    };
+
+    const squadsMap = new Map(Object.entries(squads));
+    
+    console.log(squadsMap);
+    console.log(squadsMap.size);
+    console.log(squadsMap.has('vasco'));
+    console.log(squadsMap.has('palmeiras'));
+    console.log(squadsMap.get('bvb'));
+
+</script>
+</html>
